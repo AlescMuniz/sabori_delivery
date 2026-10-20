@@ -22,4 +22,16 @@ void main() {
 
     expect(find.text('O que você deseja pedir?'), findsOneWidget);
   });
+
+  testWidgets('Busca filtra os produtos pelo texto', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: PaginaBusca()));
+
+    expect(find.text('6 itens'), findsOneWidget);
+
+    await tester.enterText(find.byType(TextField), 'pizza');
+    await tester.pump();
+
+    expect(find.text('1 item'), findsOneWidget);
+    expect(find.text('Pizza de calabresa'), findsOneWidget);
+  });
 }
