@@ -1,0 +1,21 @@
+# Flutter e Dart
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Arquivos locais de IDE
+.idea/
+.vscode/
+*.iml
+
+# Arquivos gerados
+**/flutter/ephemeral/
+android/local.properties
+android/key.properties
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
